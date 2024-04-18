@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테슬라 주주총회 카운트다운</title>
+</head>
+<body>
+    <div class="container">
+        <div class="event-countdown">
+            <div class="container tw-flex tw-flex-col tw-items-center tw-justify-center">
+                <div class="tw-flex">
+                    <!-- 대체 이미지 사용 -->
+                    <img height="100px" width="100px" src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Tesla_logo.png">
+                  <p></P>
+                   <img height="100px" width="350px" src="https://pbs.twimg.com/profile_banners/124483553/1698244946/1500x500">
+                    <h1 class="jumbotron-heading float-right ml-3">테슬라 주주총회</h1>
+                </div>
+                <div>
+                    <p class="lead text-muted">
+                        테슬라 주주총회까지 남은 시간<br>
+                        <span class="event-countdown-time">40 days 4 h 57 min 59 sec</span>
+                    </p>
+                    <p>
+                        날짜 : <span class="font-bold">24/06/14 한국시간 AM 05:00</span>
+                    </p>
+                </div>
+            </div>
+            <style>
+                .event-countdown .container {
+                    max-width: 600px;
+                    margin: 0 auto;
+                    padding: 20px;
+                    border-radius: 10px;
+                    background-color: #20232a;
+                }
+                .event-countdown h1, .event-countdown .event-countdown-time {
+                    margin: 20px 0;
+                }
+                .event-countdown .lead {
+                    color: #bbb;
+                }
+                .event-countdown .font-bold {
+                    font-weight: bold;
+                }
+                .event-countdown a {
+                    color: #61dafb;
+                }
+                .event-countdown .event-countdown-time {
+                    font-size: 26px;
+                    color: #61dafb;
+                }
+                .event-countdown img {
+                    margin-bottom: 20px;
+                }
+                .event-countdown {
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    color: white;
+                    text-align: center;
+                }
+            </style>
+        </div>
+    </div>
+    <script>
+        // 타이머 시작
+        const targetDate = new Date('June 14, 2024 05:30:00').getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.querySelector('.event-countdown-time').innerText = `${days} days ${hours} h ${minutes} min ${seconds} sec`;
+
+            if (distance < 0) {
+                clearInterval(interval);
+                document.querySelector('.event-countdown-time').innerText = '이벤트가 시작되었습니다.';
+            }
+        }
+
+        const interval = setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>
