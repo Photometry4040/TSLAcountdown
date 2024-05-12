@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - 테슬라주주총회</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -26,62 +36,30 @@
                     </p>
                 </div>
             </div>
-            <style>
-                .event-countdown .container {
-                    max-width: 600px;
-                    margin: 0 auto;
-                    padding: 20px;
-                    border-radius: 10px;
-                    background-color: #20232a;
-                }
-                .event-countdown h1, .event-countdown .event-countdown-time {
-                    margin: 20px 0;
-                }
-                .event-countdown .lead {
-                    color: #bbb;
-                }
-                .event-countdown .font-bold {
-                    font-weight: bold;
-                }
-                .event-countdown a {
-                    color: #61dafb;
-                }
-                .event-countdown .event-countdown-time {
-                    font-size: 26px;
-                    color: #61dafb;
-                }
-                .event-countdown img {
-                    margin-bottom: 20px;
-                }
-                .event-countdown {
-                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                    color: white;
-                    text-align: center;
-                }
-            </style>
+      <!-- 테슬라 로보택시 발표일 카운트다운 추가 -->
+            <div class="container tw-flex tw-flex-col tw-items-center tw-justify-center">
+                <div class="tw-flex">
+                    <img height="400px" src="https://raw.githubusercontent.com/Photometry4040/TSLAcountdown/main/TSLA_robotaxi.webp">
+                    <h1 class="jumbotron-heading float-right ml-3">테슬라 로보택시 발표일</h1>
+                </div>
+
+                <div>
+                    <p class="lead text-muted">
+                        테슬라 로보택시 발표일까지 남은 시간<br>
+                        <span class="robotaxi-countdown-time">00 days 00 h 00 min 00 sec</span>
+                    </p>
+                    <p>
+                        날짜 : <span class="font-bold">24/08/08 한국시간 AM 09:00</span>
+                    </p>
+                </div>
+        
         </div>
     </div>
-    <script>
-        // 타이머 시작
-        const targetDate = new Date('June 14, 2024 05:30:00').getTime();
+ 
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
 
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const distance = targetDate - now;
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.querySelector('.event-countdown-time').innerText = `${days} days ${hours} h ${minutes} min ${seconds} sec`;
-
-            if (distance < 0) {
-                clearInterval(interval);
-                document.querySelector('.event-countdown-time').innerText = '이벤트가 시작되었습니다.';
-            }
-        }
-
-        const interval = setInterval(updateCountdown, 1000);
-    </script>
 </body>
 </html>

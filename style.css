@@ -1,0 +1,43 @@
+.event-countdown .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #20232a; /* 기존 배경색 */
+    }
+    .event-countdown h1, .event-countdown .event-countdown-time {
+        margin: 20px 0;
+    }
+    .event-countdown .lead {
+        color: #bbb; /* 부가 설명 텍스트 색상 */
+    }
+    .event-countdown .font-bold {
+        font-weight: bold;
+    }
+    .event-countdown a {
+        color: #61dafb;
+    }
+    .event-countdown .event-countdown-time, .robotaxi-countdown-time {
+        font-size: 26px; /* 시간 표시 크기 */
+        color: #61dafb; /* 시간 표시 색상 */
+    }
+    .event-countdown img {
+        margin-bottom: 20px;
+    }
+    .event-countdown {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        text-align: center;
+    }
+    /* 로보택시 발표일 카운트다운 스타일 */
+    .robotaxi-countdown-time {
+        font-size: 30px; /* 큰 폰트 크기 */
+        color: #ff5050; /* 눈에 띄는 색상 */
+    }
+    .robotaxi-section {
+        background-color: #333333; /* 더 어두운 배경색 */
+        border: 2px solid #ff5050; /* 테두리 색상 강조 */
+        padding: 20px; /* 패딩 조정 */
+        border-radius: 15px; /* 둥근 테두리 */
+        margin-top: 20px; /* 상단 여백 */
+    }
